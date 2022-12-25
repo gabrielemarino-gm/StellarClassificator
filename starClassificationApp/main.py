@@ -69,16 +69,16 @@ def start():
     mjd = float(entry_mjd.get())
 
     df = pd.DataFrame(
-        {
-            "g": [g],
-            "r": [r],
-            "i": [i],
-            "z": [z],
-            "specobjid": [specobjid],
-            "redshift": [redshift],
-            "plate": [plate],
-            "mjd": [mjd]
-         })
+    {
+        "g": [g],
+        "r": [r],
+        "i": [i],
+        "z": [z],
+        "specobjid": [specobjid],
+        "redshift": [redshift],
+        "plate": [plate],
+        "mjd": [mjd]
+    })
 
     y_pred = classifier.predict(df)
 
