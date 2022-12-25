@@ -99,7 +99,7 @@ def reset():
     entry_redshift.delete(0, tk.END)
     entry_plate.delete(0, tk.END)
     entry_mjd.delete(0, tk.END)
-    label_res.delete(0, tk.END)
+    label_res.config(text="")
 
 # Crea un pulsante
 buttonReset = tk.Button(root, text = "Reset", command=reset)
