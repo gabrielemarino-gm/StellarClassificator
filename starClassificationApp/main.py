@@ -1,13 +1,17 @@
-
 import tkinter as tk
 import pickle
 import pandas as pd
+import os
 
-# file = 'Users/gabriele/Desktop/Università/Primo Anno/Data Mining and Machine Learnig/StellarClassificator/starClassificationApp/model.pkl'
-file = 'model.pkl'
+# PyCharm
+# file = './model.pkl'
+
+# VS Code
+file = './starClassificationApp/model.pkl'
 
 # Crea la finestra principale
 root = tk.Tk()
+root.wm_title('Stellar Classification')
 root.geometry("350x500+50+50")
 
 # 'dec', 'u', 'g', 'r', 'i', 'z', 'specobjid', 'redshift', 'plate', 'mjd'
