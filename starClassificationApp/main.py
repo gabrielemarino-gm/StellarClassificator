@@ -14,7 +14,6 @@ root = tk.Tk()
 root.wm_title('Stellar Classification')
 root.geometry("350x500+50+50")
 
-# 'dec', 'u', 'g', 'r', 'i', 'z', 'specobjid', 'redshift', 'plate', 'mjd'
 
 label_dec = tk.Label(root, text = "dec:")
 label_u = tk.Label(root, text = "u:")
