@@ -1,13 +1,12 @@
 import tkinter as tk
 import pickle
 import pandas as pd
-import os
 
 # PyCharm
-# file = './model.pkl'
+file = './model.pkl'
 
 # VS Code
-file = './starClassificationApp/model.pkl'
+#file = './starClassificationApp/model.pkl'
 
 # Crea la finestra principale
 root = tk.Tk()
