@@ -12,10 +12,9 @@ file = './starClassificationApp/model.pkl'
 # Crea la finestra principale
 root = tk.Tk()
 root.wm_title('Stellar Classification')
-root.geometry("350x500+50+50")
+root.geometry("350x475+50+50")
 
 
-label_dec = tk.Label(root, text = "dec:")
 label_u = tk.Label(root, text = "u:")
 label_g = tk.Label(root, text = "g:")
 label_r = tk.Label(root, text = "r:")
@@ -26,7 +25,6 @@ label_redshift = tk.Label(root, text = "redshift:")
 label_plate = tk.Label(root, text = "plate:")
 label_mjd = tk.Label(root, text = "mjd:")
 
-entry_dec = tk.Entry(root)
 entry_u = tk.Entry(root)
 entry_g = tk.Entry(root)
 entry_r = tk.Entry(root)
@@ -38,9 +36,6 @@ entry_plate = tk.Entry(root)
 entry_mjd = tk.Entry(root)
 
 # Posiziona la etichetta e il pulsante nella finestra
-label_dec.grid(row=0, column=0, pady=10, padx=10, sticky="e")
-entry_dec.grid(row=0, column=1)
-
 label_u.grid(row=1, column=0, pady=10, padx=10, sticky="e")
 entry_u.grid(row=1, column=1)
 
@@ -77,7 +72,6 @@ def start():
         # Carica il modello dal file
         classifier = pickle.load(f)
 
-    dec = float(entry_dec.get())
     u = float(entry_u.get())
     g = float(entry_g.get())
     r = float(entry_r.get())
@@ -90,7 +84,6 @@ def start():
 
     df = pd.DataFrame(
     {
-        "dec": [dec],
         "u": [u],
         "g": [g],
         "r": [r],
